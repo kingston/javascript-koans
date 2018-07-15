@@ -10,14 +10,14 @@ describe("About Functions", function() {
   });
 
   it("should know internal variables override outer variables", function () {
-    var message = "Outer";
+    const message = "Outer";
 
     function getMessage() {
       return message;
     }
 
     function overrideMessage() {
-      var message = "Inner";
+      const message = "Inner";
       return message;
     }
 
@@ -27,9 +27,9 @@ describe("About Functions", function() {
   });
 
   it("should have lexical scoping", function () {
-    var variable = "top-level";
+    const variable = "top-level";
     function parentfunction() {
-      var variable = "local";
+      const variable = "local";
       function childfunction() {
         return variable;
       }
@@ -42,15 +42,15 @@ describe("About Functions", function() {
 
     function makeMysteryFunction(makerValue)
     {
-      var newFunction = function doMysteriousThing(param)
+      const newFunction = function doMysteriousThing(param)
       {
         return makerValue + param;
       };
       return newFunction;
     }
 
-    var mysteryFunction3 = makeMysteryFunction(3);
-    var mysteryFunction5 = makeMysteryFunction(5);
+    const mysteryFunction3 = makeMysteryFunction(3);
+    const mysteryFunction5 = makeMysteryFunction(5);
 
     expect(mysteryFunction3(10) + mysteryFunction5(5)).toBe(FILL_ME_IN);
   });
@@ -70,7 +70,7 @@ describe("About Functions", function() {
     expect(returnSecondArg("only give first arg")).toBe(FILL_ME_IN);
 
     function returnAllArgs() {
-      var argsArray = [];
+      const argsArray = [];
       for (var i = 0; i < arguments.length; i += 1) {
         argsArray.push(arguments[i]);
       }
