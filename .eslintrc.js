@@ -7,7 +7,8 @@ module.exports = {
       "jasmine": true
     },
     "rules": {
-      "no-unused-vars": ["error", { "args": "none" }]
+      "no-unused-vars": ["error", { "args": "none" }],
+      "no-var": ["error"]
     },
     "globals": {
       "FILL_ME_IN": true,
