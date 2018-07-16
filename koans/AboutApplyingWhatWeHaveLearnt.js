@@ -16,7 +16,8 @@ describe("About Applying What We Have Learnt", function() {
 
   it("given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (imperative)", function () {
 
-    let i,j,hasMushrooms, productsICanEat = [];
+    let i,j,hasMushrooms;
+    const productsICanEat = [];
 
     for (i = 0; i < products.length; i+=1) {
         if (products[i].containsNuts === false) {
@@ -60,15 +61,15 @@ describe("About Applying What We Have Learnt", function() {
 
     let sum = FILL_ME_IN;    /* try chaining range() and reduce() */
 
-    expect(233168).toBe(FILL_ME_IN);
+    expect(233168).toBe(sum);
   });
 
   /*********************************************************************************/
    it("should count the ingredient occurrence (imperative)", function () {
     let ingredientCount = { "{ingredient name}": 0 };
 
-    for (i = 0; i < products.length; i+=1) {
-        for (j = 0; j < products[i].ingredients.length; j+=1) {
+    for (let i = 0; i < products.length; i+=1) {
+        for (let j = 0; j < products[i].ingredients.length; j+=1) {
             ingredientCount[products[i].ingredients[j]] = (ingredientCount[products[i].ingredients[j]] || 0) + 1;
         }
     }
